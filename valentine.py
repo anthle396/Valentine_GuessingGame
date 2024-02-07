@@ -1,6 +1,6 @@
 ###########################################################################
 #                          MAIN PROGRAM FILE                              
-#			      valetine.py 								  
+#			     valetine.py 								  
 ###########################################################################
 # Functionality: This program will act as a guessing game				  
 # that will ask the user to guess what the word is but really it This	  
@@ -80,7 +80,7 @@ def handle_guess(guess, letter_dict, max_len):
 
 ################### Mainline ########################
 if __name__ == "__main__":
-
+	
 	# Vars
 	hearts = 3
 	string = "willyoubemyvalentine"
@@ -107,7 +107,7 @@ if __name__ == "__main__":
 		# If player doens't want to play exits
 		if (choice.lower() == "n"):
 			clear()
-			name = input ("Please enter your name: ")
+			name = input ("Please re-enter your name: ")
 		
 		# If player renames
 		elif (choice.lower() == "y"):
@@ -203,17 +203,29 @@ if __name__ == "__main__":
 		if (choice.lower() == "n"):
 			clear()
 			choice = input ("Are you sure you said no and not yes (ㆆ _ ㆆ)? (y/n): ")
+			
 			if (choice.lower() == "y"):
 				clear()
 				print("Nah try again.")
 				choice = input(str(name) + ", WILL YOU BE MY VALENTINE \u2665? (y/n): ").lower()
 			
 			elif(choice.lower() == "n"):
-				print("\n\nHOORAYYYYYYYYYYYYYYYYYY YAYYYYYYYYYYYYYY \u2665\u2665\u2665!!!!\n\n")
-				while i < 24:
-					print("\u2665 HAPPY VALENTINESS \u2665 " + str(name) + "!!!!!!!!!")
-					i += 1
-				exit(1)
+				print("Hmmm lets try again... (ㆆ ____ㆆ)")
+				choice = input(str(name) + ", WILL YOU BE MY VALENTINE \u2665? (y/y): ").lower()
+				
+				if (choice.lower() == "y"):
+					print("\n\nHOORAYYYYYYYYYYYYYYYYYY YAYYYYYYYYYYYYYY \u2665\u2665\u2665!!!!\n\n")
+					
+					while i < 24:
+						print("\u2665 HAPPY VALENTINESS \u2665 " + str(name) + "!!!!!!!!!")
+						i += 1
+					exit(1)
+				
+				else:
+					clear()
+					print("Not a valid input. Try again dummy.\n")
+					choice = input(str(name) + ", WILL YOU BE MY VALENTINE \u2665? (y/y): ").lower()
+
 		# If player renames
 		elif (choice.lower() == "y"):
 			clear()
