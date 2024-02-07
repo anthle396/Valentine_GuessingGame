@@ -1,6 +1,6 @@
 ###########################################################################
 #                          MAIN PROGRAM FILE                              
-#							valetine.py 								  
+#			      valetine.py 								  
 ###########################################################################
 # Functionality: This program will act as a guessing game				  
 # that will ask the user to guess what the word is but really it This	  
@@ -13,7 +13,7 @@
 ################### Functions #######################
 
 #########################################################################################################
-# @function clear() 				- Displays a ton of newlines (\n) so that it looks like page is cleared
+# @function clear() 			- Displays a ton of newlines (\n) so that it looks like page is cleared
 # @return none
 #########################################################################################################
 # Clear function takes in nothing and makes a lot of newliens
@@ -23,11 +23,11 @@ def clear():
 
 #########################################################################################################
 # @function display_guess() 		- Takes the letter_dict and decodes the values that have been enabled
-#									  by a 1 and if not then returns an '_' back to the output
-# @param letter_dict 				- A dictionary that stores all the possible values to be guessed 
-#						  			  and sets their value as 1 when guessed
+#					  by a 1 and if not then returns an '_' back to the output
+# @param letter_dict 			- A dictionary that stores all the possible values to be guessed 
+#					  and sets their value as 1 when guessed
 #
-# @return output					- returns a string of the guessed and unguessed letters
+# @return output			- returns a string of the guessed and unguessed letters
 #########################################################################################################
 # Function that displays a letter for every one guessed
 def display_guess(letter_dict):
@@ -51,10 +51,10 @@ def display_guess(letter_dict):
 
 #########################################################################################################
 # @function handle_guess() 		- Handles each letter case and changes letter_dict and returns it back
-# @param guess 						- A char that is the letter the user guessed 
-# @param letter_dict 				- A dictionary that stores all the possible values to be guessed 
-#						  			  and sets their value as 1 when guessed
-# @param max_len					- The max_len of letters the user can guess
+# @param guess 				- A char that is the letter the user guessed 
+# @param letter_dict 			- A dictionary that stores all the possible values to be guessed 
+#					  and sets their value as 1 when guessed
+# @param max_len			- The max_len of letters the user can guess
 #
 # @return letter_dict, max_len		- Returns the letter_dict back and the max_len of the words remaining
 #########################################################################################################
